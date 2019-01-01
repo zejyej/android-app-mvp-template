@@ -1,0 +1,197 @@
+ext.deps = [:]
+
+def versions = [:]
+versions.arch = hasProperty("ARCH_VERSION") ? getProperty("ARCH_VERSION") : "1.0.0"
+versions.support = "27.1.1"
+versions.junit = "4.12"
+versions.dagger = "2.15"
+versions.espresso = "3.0.2"
+versions.retrofit = "2.4.0"
+versions.fresco = "1.5.0"
+versions.mockwebserver = "3.8.1"
+versions.apache_commons = "2.5"
+versions.mockito = "2.7.19"
+versions.mockito_all = "1.10.19"
+versions.dexmaker = "2.2.0"
+versions.constraint_layout = "1.1.0"
+versions.glide = "3.8.0"
+versions.timber = "4.5.1"
+versions.android_gradle_plugin = "3.0.0"
+versions.rxjava2 = "2.1.5"
+versions.rx_android = "2.0.1"
+versions.arouter_version = "1.2.4"
+versions.arouter_processor_version = "1.1.4"
+versions.atsl_runner = "1.0.2"
+versions.atsl_rules = "1.0.2"
+versions.hamcrest = "1.3"
+versions.kotlin = "1.2.0"
+versions.paging = "1.0.0"
+versions.okhttp = "3.9.0"
+versions.butterknife = "8.8.1"
+versions.atlas_core = "5.0.7.55@aar"
+versions.atlas_update = "1.1.4.14@aar"
+versions.rx_life_cycle = "2.2.1"
+versions.anko = "0.10.4"
+versions.ktx = "0.3"
+versions.logger = "2.2.0"
+versions.hawk = "2.0.1"
+versions.qiyukf = "3.14.1"
+versions.fastjson = "1.1.68.android"
+versions.multidex = "1.0.2"
+versions.brvah = "2.9.18"
+versions.multi_state_view = "1.3.2"
+versions.smart_refresh_layout = "1.0.4"
+versions.circle_image_view = "2.1.0"
+versions.picker_view = "3.2.5"
+
+def support = [:]
+support.annotations = "com.android.support:support-annotations:$versions.support"
+support.app_compat = "com.android.support:appcompat-v7:$versions.support"
+support.v4 = "com.android.support:support-v4:$versions.support"
+support.recyclerview = "com.android.support:recyclerview-v7:$versions.support"
+support.cardview = "com.android.support:cardview-v7:$versions.support"
+support.design = "com.android.support:design:$versions.support"
+support.core_utils = "com.android.support:support-core-utils:$versions.support"
+support.support_vector_drawable = "com.android.support:support-vector-drawable:$versions.support"
+//add support to deps
+deps.support = support
+
+def room = [:]
+room.runtime = "android.arch.persistence.room:runtime:$versions.arch"
+room.compiler = "android.arch.persistence.room:compiler:$versions.arch"
+room.rxjava2 = "android.arch.persistence.room:rxjava2:$versions.arch"
+room.testing = "android.arch.persistence.room:testing:$versions.arch"
+//add room to deps
+deps.room = room
+
+def lifecycle = [:]
+lifecycle.runtime = "android.arch.lifecycle:runtime:$versions.arch"
+lifecycle.extensions = "android.arch.lifecycle:extensions:$versions.arch"
+lifecycle.java8 = "android.arch.lifecycle:common-java8:$versions.arch"
+lifecycle.compiler = "android.arch.lifecycle:compiler:$versions.arch"
+//add lifecycle to deps
+deps.lifecycle = lifecycle
+
+def rxlifecycle = [:]
+rxlifecycle.runtime = "com.trello.rxlifecycle2:rxlifecycle:$versions.rx_life_cycle"
+rxlifecycle.kotlin = "com.trello.rxlifecycle2:rxlifecycle-kotlin:$versions.rx_life_cycle"
+rxlifecycle.component = "com.trello.rxlifecycle2:rxlifecycle-components:$versions.rx_life_cycle"
+deps.rxlifecycle = rxlifecycle
+
+def arch_core = [:]
+arch_core.testing = "android.arch.core:core-testing:$versions.arch"
+//add arch_core to deps
+deps.arch_core = arch_core
+
+def okhttp = [:]
+okhttp.okhttp3 = "com.squareup.okhttp3:okhttp:$versions.okhttp"
+okhttp.okhttp3_logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp"
+deps.okhttp = okhttp
+
+def arouter = [:]
+arouter.runtime = "com.alibaba:arouter-api:$versions.arouter_version"
+arouter.compiler = "com.alibaba:arouter-compiler:$versions.arouter_processor_version"
+//add arouter to deps
+deps.arouter = arouter
+
+def retrofit = [:]
+retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+retrofit.adapter_rxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+//add retroif to deps
+deps.retrofit = retrofit
+
+def dagger = [:]
+dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
+dagger.android = "com.google.dagger:dagger-android:$versions.dagger"
+dagger.android_support = "com.google.dagger:dagger-android-support:$versions.dagger"
+dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
+dagger.android_support_compiler = "com.google.dagger:dagger-android-processor:$versions.dagger"
+//add dagger to deps
+deps.dagger = dagger
+
+def fresco = [:]
+fresco.runtime = "com.facebook.fresco:fresco:$versions.fresco"
+fresco.imagepipeline = "com.facebook.fresco:imagepipeline-okhttp3:$versions.fresco"
+//add fresco to deps
+deps.fresco = fresco
+
+def espresso = [:]
+espresso.core = "com.android.support.test.espresso:espresso-core:$versions.espresso"
+espresso.contrib = "com.android.support.test.espresso:espresso-contrib:$versions.espresso"
+espresso.intents = "com.android.support.test.espresso:espresso-intents:$versions.espresso"
+//add expresso to deps
+deps.espresso = espresso
+
+def atsl = [:]
+atsl.runner = "com.android.support.test:runner:$versions.atsl_runner"
+atsl.rules = "com.android.support.test:rules:$versions.atsl_runner"
+//add atsl to deps
+deps.atsl = atsl
+
+def mockito = [:]
+mockito.core = "org.mockito:mockito-core:$versions.mockito"
+mockito.all = "org.mockito:mockito-all:$versions.mockito_all"
+//add mockito to deps
+deps.mockito = mockito
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jre7:$versions.kotlin"
+kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+//add kotlin to deps
+deps.kotlin = kotlin
+
+def smart_refresh_layout = [:]
+smart_refresh_layout.core = "com.scwang.smartrefresh:SmartRefreshLayout:$versions.smart_refresh_layout"
+smart_refresh_layout.header = "com.scwang.smartrefresh:SmartRefreshHeader:$versions.smart_refresh_layout"
+deps.smart_refresh_layout = smart_refresh_layout
+
+def atlas = [:]
+atlas.atlas_core = "com.taobao.android:atlas_core:$versions.atlas_core"
+atlas.atlas_update  = "com.taobao.android:atlasupdate:$versions.atlas_update"
+deps.atlas = atlas
+
+deps.paging = "android.arch.paging:runtime:$versions.paging"
+deps.glide = "com.github.bumptech.glide:glide:$versions.glide"
+deps.dexmaker = "com.linkedin.dexmaker:dexmaker-mockito:$versions.dexmaker"
+deps.constraint_layout = "com.android.support.constraint:constraint-layout:$versions.constraint_layout"
+deps.timber = "com.jakewharton.timber:timber:$versions.timber"
+deps.junit = "junit:junit:$versions.junit"
+deps.mock_web_server = "com.squareup.okhttp3:mockwebserver:$versions.mockwebserver"
+deps.rxjava2 = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"
+deps.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+deps.hamcrest = "org.hamcrest:hamcrest-all:$versions.hamcrest"
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+deps.anko = "org.jetbrains.anko:anko:$versions.anko"
+deps.ktx = "androidx.core:core-ktx:$versions.ktx"
+deps.logger = "com.orhanobut:logger:$versions.logger"
+deps.hawk = "com.orhanobut:hawk:$versions.hawk"
+deps.qiyukf = "com.qiyukf.unicorn:unicorn:$versions.qiyukf"
+deps.fastjson = "com.alibaba:fastjson:$versions.fastjson"
+deps.multidex = "com.android.support:multidex:$versions.multidex"
+deps.brvah = "com.github.CymChad:BaseRecyclerViewAdapterHelper:$versions.brvah"
+deps.multi_state_view = "com.github.Kennyc1012:MultiStateView:$versions.multi_state_view"
+deps.circle_image_view = "de.hdodenhof:circleimageview:$versions.circle_image_view"
+deps.picker_view = "com.contrarywind:Android-PickerView:$versions.picker_view"
+ext.deps = deps
+
+def build_versions = [:]
+build_versions.min_sdk = 15
+build_versions.target_sdk = 27
+build_versions.build_tools = "27.1.1"
+ext.build_versions = build_versions
+
+static def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.jcenter()
+    handler.mavenCentral()
+    handler.maven { url 'https://oss.jfrog.org/libs-snapshot' }
+    handler.maven { url 'https://jitpack.io' }
+    handler.maven { url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/" }
+    handler.maven { url "https://jitpack.io" }
+    handler.maven { url 'https://dl.bintray.com/hpdx/maven/' }
+    handler.maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+
+}
+ext.addRepos = this.&addRepos

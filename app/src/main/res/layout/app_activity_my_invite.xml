@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7f7f7" >
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_gravity="left"
+            android:src="@drawable/fanhuijiantou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_zhongjian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:text="我的邀请"
+            />
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/colorAccent"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    style="@style/MatchMatch.Vertical">
+    <ImageView
+        style="@style/WrapWrap"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/base_empty_iv"
+        />
+</RelativeLayout>

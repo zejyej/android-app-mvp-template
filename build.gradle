@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: 'version.gradle'
+    ext.kotlin_version = '1.2.41'
+    addRepos(repositories)
+
+    configurations.all {
+        resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+allprojects {
+    addRepos(repositories)
+}
+
+subprojects {
+    addRepos(repositories)
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

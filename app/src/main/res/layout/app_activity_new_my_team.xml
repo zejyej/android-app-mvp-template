@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7f7f7" >
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/fanhuijiantou" />
+
+        <TextView
+            android:id="@+id/tvMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/linearLayout"
+            android:layout_gravity="center"
+            android:layout_marginBottom="17dp"
+            tools:text="团队"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+    <!--展示区-->
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/team_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rv_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--圆形头像-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/myPic"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/circleimage"
+                app:civ_border_color="#a0cab6"
+                app:civ_border_width="2dp" />
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/myPic"
+
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvTeamName"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="团队: "
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/tvAssistant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="队长: "
+                    android:textColor="@color/white" />
+                <TextView
+                    android:id="@+id/tvMemLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="等级: "
+                    android:textColor="@color/white" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvWechatNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="联系微信: "
+                        android:textColor="@color/white" />
+                    <Button
+                        android:id="@+id/btnClickToCopy"
+                        android:layout_width="43dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="复制"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/juxingbeijing_gray"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTeamPeopleNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="成员数: "
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_below="@id/flContent"
+        android:id="@+id/llHead"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#f2f2f2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="店主"
+            android:textColor="@color/_59"
+            android:textSize="10sp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="邀请人"
+            android:textColor="@color/_59"
+            android:textSize="10sp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="等级"
+            android:textColor="@color/_59"
+            android:textSize="10sp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="销售额"
+            android:textColor="@color/_59"
+            android:textSize="10sp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="加入时间"
+            android:textColor="@color/_59"
+            android:textSize="10sp"
+            />
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_below="@id/llHead"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.kennyc.view.MultiStateView
+            android:id="@+id/multiStateView"
+            style="@style/MultiStateStyle">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.kennyc.view.MultiStateView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+</RelativeLayout>

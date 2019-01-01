@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">common_business</string>
+    <string name="network_unavailable">网络不可用</string>
+    <string name="shopper_login">店主登录</string>
+    <string name="account">账号</string>
+    <string name="pwd">请输入密码</string>
+</resources>

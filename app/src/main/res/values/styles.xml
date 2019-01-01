@@ -1,0 +1,5 @@
+<resources>
+    <style name="app_custom_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/my_checkbox</item>
+    </style>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sp18">18sp</dimen>
+    <dimen name="px1">1px</dimen>
+    <dimen name="dp54">54dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="sp15">15sp</dimen>
+    <dimen name="text_small_size">12sp</dimen>
+    <dimen name="common_margin_small">5dp</dimen>
+    <dimen name="common_margin_middle">10dp</dimen>
+</resources>

@@ -1,0 +1,117 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    //test libraries
+    testImplementation deps.junit
+    androidTestImplementation deps.atsl.runner
+    androidTestImplementation deps.espresso.core
+
+    //support libraries
+    api deps.support.app_compat
+    api deps.support.v4
+    api deps.support.design
+    api deps.support.recyclerview
+    api deps.constraint_layout
+    //lifecycle
+    api deps.lifecycle.runtime
+    kapt deps.lifecycle.compiler
+
+    //room
+    api deps.room.runtime
+    annotationProcessor deps.room.compiler
+
+    //fresco
+    api deps.fresco.runtime
+
+    //glide
+    api deps.glide
+
+    //http
+    api deps.okhttp.okhttp3
+    api deps.okhttp.okhttp3_logging_interceptor
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.retrofit.adapter_rxjava2
+
+    //rxjava2
+    api deps.rxjava2
+    api deps.rx_android
+
+    //dagger
+    api deps.dagger.runtime
+    kapt deps.dagger.compiler
+
+    //rxlifecycle
+    api deps.rxlifecycle.runtime
+    api deps.rxlifecycle.kotlin
+    api deps.rxlifecycle.component
+
+    //anko
+    api deps.anko
+    //ktx
+    api deps.ktx
+
+    //logger
+    api deps.logger
+
+    //hawk
+    api deps.hawk
+
+    //qiyukf
+    api deps.qiyukf
+
+    //fastjson
+    api deps.fastjson
+    //multidex
+    api deps.multidex
+
+    //brvah
+    api deps.brvah
+
+    //multiStateView
+    api deps.multi_state_view
+
+    //smartRefreshLayout
+    api deps.smart_refresh_layout.core
+    api deps.smart_refresh_layout.header
+
+    //circleImageView
+    api deps.circle_image_view
+
+    //pickerview
+    api deps.picker_view
+
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+}
+repositories {
+    mavenCentral()
+}
